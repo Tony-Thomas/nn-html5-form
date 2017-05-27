@@ -1,22 +1,22 @@
 /* 1 - BASE FORM STYLES */
-body {
+body{
     background: #141414;
     margin: 0;
     font-family: arial;
 }
 
-header {
+header{
     background: #0d0d0d;
     padding; 20px;
     text-align: center;
 }
 
-form {
+form{
     margin:20px;
     color:#eee;
 }
 
-form p {
+form p{
     font-size: 18px;
     letter-spacing: 0.1em;
 }
@@ -71,18 +71,20 @@ input:checked + label[for="madona"]{
 
 
 /* 4 - TEXT INPUT STYLES & FIELDSETS */
-fieldset {
+fieldset{
     padding: 20px;
     margin: 20px 0;
     border: 3px solid #222;
 }
-legend {
+
+legend{
     padding: 10px;
     font-size: 18px;
     letter-spacing: 0.1em;
 }
 
-input[type="email"], input[type="telephone"]{
+input[type="email"],
+input[type="telephone"]{
     display: block;
     margin-bottom: 20px;
     padding: 10px 10px 10px 50px;
@@ -91,7 +93,9 @@ input[type="email"], input[type="telephone"]{
     background: url(img/inputs.png) no-repeat;
     background-color: #222;
     font-size: 16px;
-    color: #fff
+    color: #fff;
+    float: left;
+    clear: both;
 }
 
 input[type="email"]{
@@ -102,7 +106,7 @@ input[type="telephone"]{
     background-position: 7px -58px;
 }
 /* 5 - SELECT BOXES */
-select {
+select{
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -120,7 +124,6 @@ select {
     width: 280px;
 }
 
-/* 6 - INPUT VALIDATION STYLES */
 input[type="submit"]{
     background: #b61111;
     padding: 15px;
@@ -131,3 +134,29 @@ input[type="submit"]{
     border: 0;
     box-shadow: 1px 3px 5px rgba(0,0,0,.5);
     width: 280px;
+}
+/* 6 - INPUT VALIDATION STYLES */
+
+input[type="email"]:valid,
+input[type="telephone"]:valid{
+    border: 2px solid #fff;
+}
+
+input[type="email"]:valid{
+    background-position: 7px -22px;
+}
+
+input[type="telephone"]:valid{
+    background-position: 7px -97px;
+}
+
+input[type="email"]:valid + .tick,
+input[type="telephone"]:valid + .tick{
+    background: url(img/tick.png) center;
+    background-size: 100%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 10px;
+}
